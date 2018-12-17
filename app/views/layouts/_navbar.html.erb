@@ -1,0 +1,31 @@
+<header>
+  <section id="main">
+    <h1><img src="images/icon.jpeg" alt="Core color">Core Color</h1>
+  
+    <div class="sns">
+      <ul>
+        <li>
+          <%= link_to "https://www.facebook.com/profile.php?id=100027529369258&epa=SEARCH_BOX" do %>
+            <%= fa_icon("facebook-square 2x")%>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "https://www.instagram.com/core_color/?hl=ja" do %>
+            <%= fa_icon("instagram 2x")%>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+    <nav class="navbar">
+        <span class="col-md-2"><%=link_to "TOP", {anchor: "top"} %></span>
+        <span class="col-md-2"><%=link_to "ABOUT", {anchor: "about"} %></span>
+        <span class="col-md-2"><%=link_to "MENU", {anchor: "menu"} %></span>
+        <span class="col-md-2"><%=link_to "NEWS", {anchor: "news"} %></span>
+        <span class="col-md-2"><%=link_to "ACCESS", {anchor: "access"} %></span>
+        <span class="col-md-2"><%=link_to "CONTACT", {anchor: "contact"} %></span>
+    </nav>
+</header>
+
+
