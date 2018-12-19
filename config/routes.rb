@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'menus/index'
+
+  get 'menus/show'
 
   root to: 'toppages#index'
 

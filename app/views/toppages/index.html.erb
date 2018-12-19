@@ -1,33 +1,25 @@
-<!--<div id="sampleCarousel" class="carousel slide" data-ride="carousel">-->
+<!--<div id="carousel" class="carousel-slide" data-ride="carousel">-->
 <!--	<ol class="carousel-indicators">-->
-<!--		<li class="active" data-target="#sampleCarousel" data-slide-to="0"></li>-->
-<!--		<li data-target="#sampleCarousel" data-slide-to="1"></li>-->
-<!--		<li data-target="#sampleCarousel" data-slide-to="2"></li>-->
+<!--		<li class="active" data-target="#carousel" data-slide-to="0"></li>-->
+<!--		<li data-target="#carousel" data-slide-to="1"></li>-->
+<!--		<li data-target="#carousel" data-slide-to="2"></li>-->
 <!--	</ol>-->
 <!--	<div class="carousel-inner" role="listbox">-->
 <!--		<div class="item active">-->
-<!--			<img src="images/tc.jpeg" alt="First slide">-->
+<!--			<img src="images/slide1.jpeg" alt="First slide">-->
 <!--		</div>-->
 <!--		<div class="item">-->
-<!--			<img src="images/slide1.jpeg" alt="Second slide">-->
+<!--			<img src="images/slide2.jpeg" alt="Second slide">-->
 <!--		</div>-->
 <!--		<div class="item">-->
 <!--			<img src="../img/sampleC-1140x500.png" alt="Third slide">-->
 <!--		</div>-->
 <!--	</div>-->
-<!--	<a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">-->
-<!--		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-<!--		<span class="sr-only">前へ</span>-->
-<!--	</a>-->
-<!--	<a class="right carousel-control" href="#sampleCarousel" role="button" data-slide="next">-->
-<!--		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-<!--		<span class="sr-only">次へ</span>-->
-<!--	</a>-->
 <!--</div>-->
 
 
-<section id="about">
-  <div class="section-inner">
+<section>
+  <div id="about" class="section-inner">
       <h2>ABOUT</h2>
       <h3>What's Color Therapy?</h3>
       <p class="description">
@@ -66,49 +58,45 @@
   </div>
 </section>
 
-<section id="menu">
+<section id="menu" class="clearfix">
   <div class="section-inner">
     <h2>LESSON MENU</h2>
     
     <div class="menu-image">
       <div class="col-md-3">
         <img src="images/tc.jpeg">
-        <%= link_to "TC color", root_path, class: "square_btn" %>
+        <%= link_to "TC color", menus_show_path(anchor: "menu1"), class: "square_btn" %>
       </div>
     </div>
     
     <div class="menu-image">
       <div class="col-md-3">
         <img src="images/sciart.jpg">
-        <%= link_to "Sci/ART", root_path, class: "square_btn" %>
+        <%= link_to "Sci/ART", menus_show_path(anchor: "menu2"), class: "square_btn" %>
       </div>
     </div>
     
     <div class="menu-image">
       <div class="col-md-3">
         <img src="images/therapist.jpeg">
-        <%= link_to "Therapist", root_path, class: "square_btn" %>
+        <%= link_to "Therapist", menus_show_path(anchor: "menu3"), class: "square_btn" %>
       </div>
     </div>
     
     <div class="menu-image">
       <div class="col-md-3">
-        <img src="images/sciart.jpeg">
-        <%= link_to "Iroiku", root_path, class: "square_btn" %>
+        <img src="images/iroiku.jpg">
+        <%= link_to "Iroiku", menus_show_path(anchor: "menu4"), class: "square_btn" %>
       </div>
     </div>
   </div>
 </section>
 
 <section id="news">
-  <div class="col-md-12">
+  <div class="section-inner">
     <h2>NEWS</h2>
-  </div>
-  
-  <!-- InstaWidget -->
-  <div class="instagram">
-    <a href="https://instawidget.net/v/user/core_color" id="link-6b23ad09c95eb6c443e8a9d6eceb8dc191877394359f2397a11239259df33ca2">@core_color</a>
-    <script src="https://instawidget.net/js/instawidget.js?u=6b23ad09c95eb6c443e8a9d6eceb8dc191877394359f2397a11239259df33ca2&width=600px"></script>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCore-Color-1873699249419673%2F%3Fmodal%3Dadmin_todo_tour&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+      width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
   </div>
 </section>
 

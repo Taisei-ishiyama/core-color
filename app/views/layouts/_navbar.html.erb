@@ -1,16 +1,16 @@
 <header>
   <section id="main">
-    <h1><img src="images/icon.jpeg" alt="Core color">Core Color</h1>
+    <h1><img src="/images/icon.jpeg" alt="Core color">Core Color</h1>
   
     <div class="sns">
       <ul>
         <li>
-          <%= link_to "https://www.facebook.com/profile.php?id=100027529369258&epa=SEARCH_BOX" do %>
+          <%= link_to "https://www.facebook.com/Core-Color-1873699249419673/?modal=admin_todo_tour", :target=>["_blank"] do %>
             <%= fa_icon("facebook-square 2x")%>
           <% end %>
         </li>
         <li>
-          <%= link_to "https://www.instagram.com/core_color/?hl=ja" do %>
+          <%= link_to "https://www.instagram.com/core_color/?hl=ja", :target=>["_blank"] do %>
             <%= fa_icon("instagram 2x")%>
           <% end %>
         </li>
@@ -19,12 +19,12 @@
   </section>
   
     <nav class="navbar">
-        <span class="col-md-2"><%=link_to "TOP", {anchor: "top"} %></span>
-        <span class="col-md-2"><%=link_to "ABOUT", {anchor: "about"} %></span>
-        <span class="col-md-2"><%=link_to "MENU", {anchor: "menu"} %></span>
-        <span class="col-md-2"><%=link_to "NEWS", {anchor: "news"} %></span>
-        <span class="col-md-2"><%=link_to "ACCESS", {anchor: "access"} %></span>
-        <span class="col-md-2"><%=link_to "CONTACT", {anchor: "contact"} %></span>
+        <span class="col-md-2"><%=link_to "TOP", root_path(anchor: "top") %></span>
+        <span class="col-md-2"><%=link_to "ABOUT", root_path(anchor: "about") %></span>
+        <span class="col-md-2"><%=link_to "MENU", root_path(anchor: "menu") %></span>
+        <span class="col-md-2"><%=link_to "NEWS", root_path(anchor: "news") %></span>
+        <span class="col-md-2"><%=link_to "ACCESS", root_path(anchor: "access") %></span>
+        <span class="col-md-2"><%=link_to "CONTACT", root_path(anchor: "top") %></span>
     </nav>
 </header>
 
