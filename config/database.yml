@@ -27,4 +27,3 @@ production:
   database: core-color_production
   username: core-color
   password: <%= ENV['CORE-COLOR_DATABASE_PASSWORD'] %>
-  # database: db/production.sqlite3
