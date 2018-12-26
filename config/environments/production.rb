@@ -88,11 +88,11 @@ Rails.application.configure do
   # Use SendGrid - Add-ons - Heroku
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'i.taisei0411@gmail.com',
+    address: ENV["USER_NAME"],
     domain: 'gmail.com',
     port: 587,
-    user_name: "i.taisei0411@gmail.com",
-    password: "it946479",
+    user_name: ENV["USER_NAME"],
+    password: ENV["USER_PASSWORD"],
     authentication: :plain,
     enable_starttls_auto: true
   }
