@@ -1,0 +1,40 @@
+<div class="newWrap">
+  <div class="newTitle">
+    <h3>ご入力内容確認</h3>
+  </div>
+  <div class="newContent">
+    <%= form_for @inquiry, :url => inquiry_thanks_path do |f| %>
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-4">お問い合わせ項目</div>
+        <div class="col-md-8"><%= f.hidden_field :inquiry_type %><%= @inquiry.inquiry_type %></div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-4">お名前</div>
+        <div class="col-md-4"><%= f.hidden_field :first_name %><%= @inquiry.first_name %></div>
+        <div class="col-md-4"><%= f.hidden_field :name %><%= @inquiry.name %></div>
+        <div class="col-md-4 col-md-offset-4"><%= f.hidden_field :first_name_kana %><%= @inquiry.first_name_kana %></div>
+        <div class="col-md-4"><%= f.hidden_field :name_kana %><%= @inquiry.name_kana %></div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-4">メールアドレス</div>
+        <div class="col-md-8"><%= f.hidden_field :email %><%= @inquiry.email %></div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-4">電話番号</div>
+        <div class="col-md-8"><%= f.hidden_field :phone_number %><%= @inquiry.phone_number %></div>
+      </div>
+      
+      <div class="form-group">
+        <div class="col-md-4">お問い合わせ内容</div>
+        <div class="col-md-8"><%= f.hidden_field :message %><%= simple_format(@inquiry.message) %></div>
+      </div>
+    </div>
+      
+      <%= f.submit '送信する', class: 'btn btn-block btn-success' %>
+    <% end %>
+  </div>
+</div>

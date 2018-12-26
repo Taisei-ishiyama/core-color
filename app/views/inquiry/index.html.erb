@@ -1,0 +1,79 @@
+<% @page_title = 'お問い合わせ' %>
+<div class="newWrap">
+  <div class="newTitle">
+    <h3>CONTACT</h3>
+    <div>お問い合わせ</div>
+  </div>
+  <div class="newContent">
+    <%= form_for @inquiry, :url => inquiry_confirm_path do |f| %>
+      <% if @inquiry.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <strong>入力内容にエラーがあります</strong>
+          <ul>
+            <% @inquiry.errors.each do |attr, msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="row">
+          <div class="form-group">
+          <div class="col-md-4">
+            <div class="contact-title">お問い合わせ項目<span class="text-danger">*</span>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <%= f.select :inquiry_type,["ご予約に関するお問い合わせ","その他お問い合わせ"] %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          
+          <div class="col-md-4">
+            <div class="contact-title">お名前<span class="text-danger">*</span></div>
+          </div>
+          
+          <div class="col-md-4"><%= f.text_field :first_name, :placeholder => "姓",class: 'form-control mb-2' %></div>
+          <div class="col-md-4"><%= f.text_field :name, :placeholder => "名",class: 'form-control mb-2' %></div>
+          
+          <div class="col-md-4 col-md-offset-4">
+            <div class="text-margin">
+              <%= f.text_field :first_name_kana, :placeholder => "セイ", class: 'form-control mb-2' %>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="text-margin">
+              <%= f.text_field :name_kana, :placeholder => "メイ",class: 'form-control mb-2' %>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="col-md-4">
+            <div class="contact-title">メールアドレス<span class="text-danger">*</span>
+            </div>
+          </div>
+          <div class="col-md-8"><%= f.text_field :email, :placeholder => "core@color.com",class: 'form-control mb-2' %></div>
+        </div>
+        
+        <div class="form-group">
+          
+          <div class="col-md-4">
+            <div class="contact-title">電話番号</div>
+          </div>
+          <div class="col-md-8"><%= f.text_field :phone_number, :placeholder => "000-1234-5678",class: 'form-control mb-2' %></div>
+        </div>
+        
+        <div class="form-group">
+          <div class="col-md-4">
+            <div class="contact-title">お問い合わせ内容<span class="text-danger">*</span>
+            </div>
+          </div>
+          <div class="col-md-8"><%= f.text_area :message, :placeholder => "お問い合わせ内容をご入力ください",class: 'form-control mb-2', rows: '6' %></div>
+        </div>
+      </div>
+      <%= f.submit '確認', class: 'btn btn-block btn-success' %>
+    <% end %>
+  </div>
+</div>
